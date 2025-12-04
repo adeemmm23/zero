@@ -20,9 +20,21 @@ export default function HomePage() {
           href="#"
           className="flex items-center justify-center px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors select-none"
         >
-          Essayez notre nouvelle quiz
+          Commencez le défi
         </a>
       </div>
+      <figure className="flex flex-col items-center">
+        <Image
+          src="/images/no_big_tech.gif"
+          alt="Village numérique résistant"
+          width={1200}
+          height={600}
+          className="mx-auto rounded-2xl"
+        />
+        <figcaption className="mt-4 text-center text-foreground/70">
+          &ldquo;Résistance contre les géants du numérique&rdquo;
+        </figcaption>
+      </figure>
     </div>
   );
 }
