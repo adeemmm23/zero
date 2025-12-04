@@ -110,13 +110,13 @@
 
 :root {
   --radius: 0.65rem;
-  --background: oklch(0.984 0.008 36.55);
-  --foreground: oklch(23.2% 0.06556 36.279);
+  --background: oklch(97.768% 0.01493 338.512);
+  --foreground: oklch(15.817% 0.05337 342.224);
   --card: oklch(0.938 0.042 58.5);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.65 0.189 45.083);
+  --primary: oklch(0.7226 0.1658 341.55);
   --primary-foreground: oklch(0.98 0.016 73.684);
   --secondary: oklch(0.4146 0.1043 40.71);
   --secondary-foreground: oklch(88.603% 0.04445 37.08);

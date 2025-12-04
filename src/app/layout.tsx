@@ -3,6 +3,7 @@ import { Lexend, Elsie, Kode_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
+import NavigationBar from "@/components/navigation-bar";
 
 const elsie = Elsie({
   subsets: ["latin"],
@@ -55,10 +56,13 @@ export default function RootLayout({
     >
       <body
         className={
-          "bg-background text-foreground font-sans font-light antialiased"
+          "bg-background text-foreground font-sans font-light antialiased flex min-h-screen flex-col p-4"
         }
       >
-        {children}
+        <NavigationBar />
+        <main className="flex flex-col mx-auto max-w-2xl w-full h-full">
+          {children}
+        </main>
       </body>
     </html>
   );
