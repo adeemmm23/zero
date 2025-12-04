@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { Lexend, Elsie, Kode_Mono } from "next/font/google";
 import localFont from "next/font/local";
+
+import "./globals.css";
 
 const elsie = Elsie({
   subsets: ["latin"],
