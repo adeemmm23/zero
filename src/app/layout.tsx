@@ -56,11 +56,11 @@ export default function RootLayout({
     >
       <body
         className={
-          "bg-background text-foreground font-sans font-light antialiased flex min-h-screen flex-col p-4"
+          "bg-background text-foreground font-sans font-light antialiased flex min-h-screen flex-col p-4 gap-6"
         }
       >
         <NavigationBar />
-        <main className="flex flex-col mx-auto max-w-2xl w-full h-full">
+        <main className="flex flex-col mx-auto max-w-4xl w-full h-full">
           {children}
         </main>
       </body>
