@@ -2,7 +2,7 @@ import Logo from "./logo";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-6 py-12 border-t border-foreground/10 mt-12">
+    <footer className="flex flex-col gap-6 py-12 mt-12">
       <div className="flex mx-auto max-w-4xl w-full gap-12">
         {/* Logo and description */}
         <div className="flex flex-col gap-4 flex-1 items-start">
