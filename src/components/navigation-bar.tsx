@@ -14,7 +14,7 @@ export default function NavigationBar() {
         href="/quiz"
         className="flex items-center justify-center px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors select-none"
       >
-        Take the Quiz
+        Passer le Quiz
       </Link>
     </nav>
   );
