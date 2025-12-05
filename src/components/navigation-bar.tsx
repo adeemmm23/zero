@@ -8,7 +8,7 @@ export default function NavigationBar() {
       <div className="flex gap-6 mx-auto">
         <NavLink href="#">Accueil</NavLink>
         <NavLink href="/check">Vérif</NavLink>
-        <NavLink href="#">FAQ</NavLink>
+        <NavLink href="https://faq-nine-olive.vercel.app">FAQ</NavLink>
       </div>
       <Link
         href="/quiz"
