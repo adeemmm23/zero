@@ -10,14 +10,11 @@ export default function NirdStep({
   description,
 }: NirdStepProps) {
   return (
-    <div className="flex gap-2">
-      {/* Number block - square */}
-      <div className="flex items-center justify-center aspect-square rounded-lg bg-primary text-white font-bold text-4xl shrink-0">
+    <div className="group relative overflow-hidden rounded-lg">
+      <div className="absolute top-0 left-0 h-full w-0 bg-primary flex items-center justify-center text-white text-4xl font-bold transition-all duration-500 ease-in-out group-hover:w-30 overflow-hidden rounded-lg">
         {number}
       </div>
-
-      {/* Content card with same height */}
-      <div className="flex flex-col gap-2 p-6 rounded-lg bg-foreground/5 flex-1 justify-center">
+      <div className="flex flex-col gap-2 p-6 rounded-lg bg-foreground/5 transition-transform duration-500 ease-in-out group-hover:translate-x-32">
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p>{description}</p>
       </div>
