@@ -106,7 +106,7 @@ export default function Page() {
           {uploading ? (
             <>
               <div className="flex items-center justify-center mb-4">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-foreground"></div>
+                <span className="symbols animate-spin text-4xl">hourglass</span>
               </div>
               <h2 className="text-xl font-semibold text-foreground">
                 Checking Truth...
@@ -142,7 +142,7 @@ export default function Page() {
                     <p className="text-foreground/80 text-sm font-semibold mb-1">
                       Decision:
                     </p>
-                    <p className="text-foreground/70 text-base font-medium">
+                    <p className="text-foreground/70 text-sm">
                       {truthResult.true_decision}
                     </p>
                   </div>
@@ -168,10 +168,10 @@ export default function Page() {
             </>
           ) : (
             <>
-              <h2 className="text-xl font-semibold text-foreground">
+              <h2 className="text-xl font-semibold text-foreground select-none pointer-events-none">
                 {isDragging ? "Drop to check truth" : "Drag & Drop Here"}
               </h2>
-              <p className="text-foreground/60 text-sm">
+              <p className="text-foreground/60 text-sm select-none pointer-events-none">
                 Drop your file to verify its authenticity
               </p>
             </>
