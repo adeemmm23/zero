@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <div className="flex items-center justify-center flex-col py-32 gap-6">
@@ -13,12 +15,12 @@ export default function HeroSection() {
         Rejoignez la quête : protégez vos données, réparez vos machines, libérez
         votre école.
       </p>
-      <a
-        href="#"
+      <Link
+        href="/quiz"
         className="flex items-center justify-center px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors select-none"
       >
         Commencez le défi
-      </a>
+      </Link>
     </div>
   );
 }

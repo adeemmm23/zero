@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "./logo";
 
 export default function NavigationBar() {
@@ -9,12 +10,12 @@ export default function NavigationBar() {
         <NavLink href="#">A propos</NavLink>
         <NavLink href="#">FAQ</NavLink>
       </div>
-      <a
-        href="#"
+      <Link
+        href="/quiz"
         className="flex items-center justify-center px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors select-none"
       >
         Take the Quiz
-      </a>
+      </Link>
     </nav>
   );
 }
