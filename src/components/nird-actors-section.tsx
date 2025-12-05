@@ -12,9 +12,11 @@ function ActorCard({ name, role, image }: ActorCardProps) {
       <Image src={image} alt={name} fill className="object-cover" />
       {/* Pink overlay */}
       <div className="absolute inset-0 bg-primary/20"></div>
-      <div className="absolute bottom-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent w-full">
-        <h4 className="text-white font-semibold text-lg">{name}</h4>
-        <p className="text-white/90 text-sm">{role}</p>
+      <div className="absolute bottom-0 right-0 p-4 w-full">
+        <h4 className="text-background bg-primary font-semibold text-lg inline">
+          {name}
+        </h4>
+        <p className="text-background bg-primary text-sm">{role}</p>
       </div>
     </div>
   );
