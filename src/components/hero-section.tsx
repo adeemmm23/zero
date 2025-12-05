@@ -12,7 +12,7 @@ export default function HeroSection() {
         <span className="text-primary">resistant</span>
       </h1>
       <p>
-        Rejoignez la quête : protégez vos données, réparez vos machines, libérez
+        Rejoignez la quête: protégez vos données, réparez vos machines, libérez
         votre école.
       </p>
       <Link
