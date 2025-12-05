@@ -7,7 +7,7 @@ export default function NavigationBar() {
       <Logo className="h-10 w-auto" />
       <div className="flex gap-6 mx-auto">
         <NavLink href="#">Accueil</NavLink>
-        <NavLink href="#">A propos</NavLink>
+        <NavLink href="/check">Vérif</NavLink>
         <NavLink href="#">FAQ</NavLink>
       </div>
       <Link
@@ -26,12 +26,27 @@ interface NavLinkProps {
 }
 
 function NavLink({ href, children }: NavLinkProps) {
+  const isExternal = href.startsWith("http");
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className="flex items-center justify-center p-2 hover:text-primary/90 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <a
+    <Link
       href={href}
       className="flex items-center justify-center p-2 hover:text-primary/90 transition-colors"
     >
       {children}
-    </a>
+    </Link>
   );
 }
