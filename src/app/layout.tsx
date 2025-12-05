@@ -3,9 +3,6 @@ import { Lexend, Elsie, Kode_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import NavigationBar from "@/components/navigation-bar";
-import Footer from "@/components/footer";
-import Messenger from "@/components/messenger";
 
 const elsie = Elsie({
   subsets: ["latin"],
