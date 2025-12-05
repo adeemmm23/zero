@@ -37,8 +37,8 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
         className="fill-foreground"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M192.296 117.333C224.697 117.333 250.963 91.0674 250.963 58.6667C250.963 26.7725 225.512 0.822681 193.811 0.0190972L192.296 0H58.6667L57.1516 0.0190972C25.4511 0.822677 0 26.7725 0 58.6667C0 91.0674 26.266 117.333 58.6667 117.333H192.296ZM192.296 94.5185C212.097 94.5185 228.148 78.4671 228.148 58.6667C228.148 38.8662 212.097 22.8148 192.296 22.8148H58.6667C38.8662 22.8148 22.8148 38.8662 22.8148 58.6667C22.8148 78.4671 38.8662 94.5185 58.6667 94.5185H192.296Z"
         fill="url(#paint0_linear_6_88)"
       />
@@ -63,10 +63,10 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2267AC" />
-          <stop offset="0.33" stop-color="#DC5CD2" />
-          <stop offset="0.66" stop-color="#FC9CB0" />
-          <stop offset="1" stop-color="#FBD469" />
+          <stop stopColor="#2267AC" />
+          <stop offset="0.33" stopColor="#DC5CD2" />
+          <stop offset="0.66" stopColor="#FC9CB0" />
+          <stop offset="1" stopColor="#FBD469" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_6_88"
@@ -76,10 +76,10 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2267AC" />
-          <stop offset="0.33" stop-color="#DC5CD2" />
-          <stop offset="0.66" stop-color="#FC9CB0" />
-          <stop offset="1" stop-color="#FBD469" />
+          <stop stopColor="#2267AC" />
+          <stop offset="0.33" stopColor="#DC5CD2" />
+          <stop offset="0.66" stopColor="#FC9CB0" />
+          <stop offset="1" stopColor="#FBD469" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_6_88"
@@ -89,10 +89,10 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2267AC" />
-          <stop offset="0.33" stop-color="#DC5CD2" />
-          <stop offset="0.66" stop-color="#FC9CB0" />
-          <stop offset="1" stop-color="#FBD469" />
+          <stop stopColor="#2267AC" />
+          <stop offset="0.33" stopColor="#DC5CD2" />
+          <stop offset="0.66" stopColor="#FC9CB0" />
+          <stop offset="1" stopColor="#FBD469" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_6_88"
@@ -102,10 +102,10 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2267AC" />
-          <stop offset="0.33" stop-color="#DC5CD2" />
-          <stop offset="0.66" stop-color="#FC9CB0" />
-          <stop offset="1" stop-color="#FBD469" />
+          <stop stopColor="#2267AC" />
+          <stop offset="0.33" stopColor="#DC5CD2" />
+          <stop offset="0.66" stopColor="#FC9CB0" />
+          <stop offset="1" stopColor="#FBD469" />
         </linearGradient>
       </defs>
     </svg>

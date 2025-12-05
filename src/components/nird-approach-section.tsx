@@ -4,7 +4,7 @@ export default function NirdApproachSection() {
   return (
     <div className="flex flex-col gap-6">
       <h2 className="text-5xl font-display text-primary">La Démarche NIRD</h2>
-      <p className="text-lg">
+      <p>
         La Démarche NIRD (Numérique Inclusif, Responsable et Durable) propose
         aux établissements scolaires un cheminement progressif en trois jalons
         pour adopter un numérique libre basé sur Linux.
