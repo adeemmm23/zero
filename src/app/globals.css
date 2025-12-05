@@ -112,10 +112,10 @@
   --radius: 0.65rem;
   --background: oklch(97.768% 0.01493 338.512);
   --foreground: oklch(15.817% 0.05337 342.224);
-  --card: oklch(0.938 0.042 58.5);
-  --card-foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(93.818% 0.04362 337.57);
+  --card-foreground: oklch(15.817% 0.05337 342.224);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(15.817% 0.05337 342.224);
   --primary: oklch(0.7226 0.1658 341.55);
   --primary-foreground: oklch(0.98 0.016 73.684);
   --secondary: oklch(0.4146 0.1043 40.71);
