@@ -6,7 +6,6 @@ import { useState } from "react";
 export default function Page() {
   const [isDragging, setIsDragging] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [uploadedUrl, setUploadedUrl] = useState<string | null>(null);
   const [truthResult, setTruthResult] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -44,7 +43,6 @@ export default function Page() {
 
     const file = files[0];
     setUploading(true);
-    setUploadedUrl(null);
     setTruthResult(null);
     setError(null);
 
@@ -60,9 +58,7 @@ export default function Page() {
       }
 
       const data = await response.json();
-      setUploadedUrl(data.url);
       setTruthResult(data.truthCheck);
-      console.log("File uploaded:", data.url);
       console.log("Truth check result:", data.truthCheck);
     } catch (err) {
       const errorMessage =
@@ -115,7 +111,6 @@ export default function Page() {
             </>
           ) : error ? (
             <>
-              <div className="text-5xl mb-4">❌</div>
               <h2 className="text-xl font-semibold text-red-500">
                 Error Occurred
               </h2>
@@ -123,7 +118,6 @@ export default function Page() {
               <button
                 onClick={() => {
                   setError(null);
-                  setUploadedUrl(null);
                   setTruthResult(null);
                 }}
                 className="mt-4 px-4 py-2 bg-foreground text-background rounded-lg hover:opacity-80 transition-opacity"
@@ -131,9 +125,8 @@ export default function Page() {
                 Try Again
               </button>
             </>
-          ) : uploadedUrl && truthResult ? (
+          ) : truthResult ? (
             <>
-              <div className="text-5xl mb-4">✅</div>
               <h2 className="text-xl font-semibold text-foreground">
                 Truth Check Complete!
               </h2>
@@ -146,13 +139,9 @@ export default function Page() {
                     {truthResult}
                   </p>
                 </div>
-                <p className="text-foreground/40 text-xs break-all">
-                  File: {uploadedUrl}
-                </p>
               </div>
               <button
                 onClick={() => {
-                  setUploadedUrl(null);
                   setTruthResult(null);
                   setError(null);
                 }}
@@ -163,7 +152,6 @@ export default function Page() {
             </>
           ) : (
             <>
-              <div className="text-5xl mb-4">📄</div>
               <h2 className="text-xl font-semibold text-foreground">
                 {isDragging ? "Drop to check truth" : "Drag & Drop Here"}
               </h2>

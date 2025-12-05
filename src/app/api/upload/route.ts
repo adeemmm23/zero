@@ -50,7 +50,6 @@ export async function POST(request: Request) {
     const result = await checkResponse.text();
 
     return NextResponse.json({
-      url: blob.url,
       truthCheck: result,
     });
   } catch (error) {
