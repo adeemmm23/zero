@@ -19,8 +19,14 @@ export async function POST(request: Request) {
   }
 
   try {
+    // Generate random filename with original extension
+    const extension = filename.includes(".")
+      ? filename.substring(filename.lastIndexOf("."))
+      : "";
+    const randomName = `${crypto.randomUUID()}${extension}`;
+
     // Upload to Vercel Blob
-    const blob = await put(filename, request.body, {
+    const blob = await put(randomName, request.body, {
       access: "public",
     });
 
