@@ -5,9 +5,9 @@ export default function NavigationBar() {
     <nav className="flex mx-auto max-w-4xl w-full gap-2 items-center py-4">
       <Logo className="h-10 w-auto" />
       <div className="flex gap-6 mx-auto">
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">About</NavLink>
-        <NavLink href="#">Features</NavLink>
+        <NavLink href="#">Accueil</NavLink>
+        <NavLink href="#">A propos</NavLink>
+        <NavLink href="#">FAQ</NavLink>
       </div>
       <a
         href="#"

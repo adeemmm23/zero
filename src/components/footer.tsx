@@ -70,8 +70,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="flex mx-auto max-w-4xl w-full pt-6 border-t border-foreground/10">
         <p className="text-sm text-foreground/70">
-          © {new Date().getFullYear()} Village Numérique Résistant. Tous droits
-          réservés.
+          © {new Date().getFullYear()} 0% Big Tech. Tous droits réservés.
         </p>
       </div>
     </footer>
