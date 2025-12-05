@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import NavigationBar from "@/components/navigation-bar";
+import Footer from "@/components/footer";
 
 const elsie = Elsie({
   subsets: ["latin"],
@@ -63,6 +64,7 @@ export default function RootLayout({
         <main className="flex flex-col mx-auto max-w-4xl w-full h-full gap-12">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

@@ -64,17 +64,7 @@ export default function NirdActorsSection() {
       <h3 className="text-5xl font-display text-primary">
         Les acteurs du modèle NIRD
       </h3>
-      <p>
-        NIRD (Numérique Inclusif, Responsable et Durable) est un modèle de
-        numérique éducatif qui vise à garantir l&#39;autonomie technologique des
-        établissements scolaires en privilégiant les logiciels libres, le
-        réemploi du matériel, la sobriété numérique et la maîtrise locale des
-        outils. Il réunit différents acteurs du système éducatif qui collaborent
-        pour construire un environnement numérique plus éthique, durable et
-        accessible à tous.
-      </p>
-
-      <div className="flex gap-6 overflow-x-auto pb-4 -mx-6 px-6 snap-x snap-mandatory">
+      <div className="flex gap-6 overflow-x-auto pb-4 px-6 snap-x snap-mandatory rounded-lg no-scrollbar">
         {actors.map((actor, index) => (
           <div key={index} className="snap-start">
             <ActorCard
