@@ -1,6 +1,6 @@
 export default function NirdIntroSection() {
   return (
-    <p className="text-center text-2xl max-w-3xl mx-auto leading-relaxed">
+    <p className="text-center text-2xl max-w-3xl mx-auto leading-relaxed my-20">
       <span className="text-primary">NIRD</span> (Numérique Inclusif,
       Responsable et Durable) est un modèle de numérique éducatif qui vise à
       garantir l'

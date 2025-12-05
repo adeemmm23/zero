@@ -31,7 +31,7 @@ export default function WhyJoinSection() {
   const [selectedReason, setSelectedReason] = useState(reasons[0]);
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 my-20">
       <h2 className="text-5xl font-display text-primary">
         Pourquoi rejoindre notre village numérique résistant ?
       </h2>
