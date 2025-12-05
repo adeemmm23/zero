@@ -3,10 +3,15 @@
 import Logo from "@/components/logo";
 import { useState } from "react";
 
+interface TruthCheckResult {
+  true_decision: string;
+  reason: string;
+}
+
 export default function Page() {
   const [isDragging, setIsDragging] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [truthResult, setTruthResult] = useState<string | null>(null);
+  const [truthResult, setTruthResult] = useState<TruthCheckResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const handleDragEnter = (e: React.DragEvent) => {
@@ -58,8 +63,9 @@ export default function Page() {
       }
 
       const data = await response.json();
-      setTruthResult(data.truthCheck);
-      console.log("Truth check result:", data.truthCheck);
+      const parsedResult = JSON.parse(data.truthCheck);
+      setTruthResult(parsedResult);
+      console.log("Truth check result:", parsedResult);
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : "An error occurred";
@@ -131,13 +137,23 @@ export default function Page() {
                 Truth Check Complete!
               </h2>
               <div className="mt-4 space-y-3 max-w-2xl">
-                <div className="bg-foreground/5 rounded-lg p-4 text-left">
-                  <p className="text-foreground/80 text-sm font-semibold mb-2">
-                    Result:
-                  </p>
-                  <p className="text-foreground/70 text-sm whitespace-pre-wrap">
-                    {truthResult}
-                  </p>
+                <div className="bg-foreground/5 rounded-lg p-4 text-left space-y-3">
+                  <div>
+                    <p className="text-foreground/80 text-sm font-semibold mb-1">
+                      Decision:
+                    </p>
+                    <p className="text-foreground/70 text-base font-medium">
+                      {truthResult.true_decision}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-foreground/80 text-sm font-semibold mb-1">
+                      Reason:
+                    </p>
+                    <p className="text-foreground/70 text-sm">
+                      {truthResult.reason}
+                    </p>
+                  </div>
                 </div>
               </div>
               <button
