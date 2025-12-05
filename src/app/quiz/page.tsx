@@ -14,111 +14,112 @@ interface Question {
 const quizQuestions: Question[] = [
   {
     id: 1,
-    question: "What does NIRD stand for?",
+    question: "Que signifie NIRD ?",
     options: [
-      "National Institute of Research and Development",
-      "Network Intelligence and Resource Distribution",
-      "Neural Interface for Resource Discovery",
-      "New Initiative for Regional Development",
+      "Institut National de Recherche et Développement",
+      "Intelligence Réseau et Distribution de Ressources",
+      "Interface Neuronale pour la Découverte de Ressources",
+      "Nouvelle Initiative pour le Développement Régional",
     ],
     correctAnswer: 0,
   },
   {
     id: 2,
-    question: "What is NIRD's primary mission?",
+    question: "Quelle est la mission principale de NIRD ?",
     options: [
-      "To provide entertainment services",
-      "To advance research and development initiatives",
-      "To sell consumer products",
-      "To manage social media platforms",
+      "Fournir des services de divertissement",
+      "Faire progresser les initiatives de recherche et développement",
+      "Vendre des produits de consommation",
+      "Gérer des plateformes de médias sociaux",
     ],
     correctAnswer: 1,
   },
   {
     id: 3,
-    question: "Which sector does NIRD primarily focus on?",
+    question: "Sur quel secteur NIRD se concentre-t-il principalement ?",
     options: [
-      "Retail and Commerce",
-      "Entertainment and Media",
-      "Research and Innovation",
-      "Transportation and Logistics",
+      "Commerce et Vente au Détail",
+      "Divertissement et Médias",
+      "Recherche et Innovation",
+      "Transport et Logistique",
     ],
     correctAnswer: 2,
   },
   {
     id: 4,
-    question: "What approach does NIRD use to solve complex problems?",
+    question:
+      "Quelle approche NIRD utilise-t-il pour résoudre les problèmes complexes ?",
     options: [
-      "Traditional methods only",
-      "Innovative and collaborative approaches",
-      "Individual isolated research",
-      "Top-down management",
+      "Méthodes traditionnelles uniquement",
+      "Approches innovantes et collaboratives",
+      "Recherche isolée et individuelle",
+      "Gestion descendante",
     ],
     correctAnswer: 1,
   },
   {
     id: 5,
-    question: "How does NIRD contribute to the community?",
+    question: "Comment NIRD contribue-t-il à la communauté ?",
     options: [
-      "Through funding only",
-      "By conducting isolated experiments",
-      "Through knowledge sharing and collaboration",
-      "By restricting access to research",
+      "Par le financement uniquement",
+      "En réalisant des expériences isolées",
+      "Par le partage des connaissances et la collaboration",
+      "En restreignant l'accès à la recherche",
     ],
     correctAnswer: 2,
   },
   {
     id: 6,
-    question: "What is one of NIRD's core values?",
+    question: "Quelle est l'une des valeurs fondamentales de NIRD ?",
     options: [
-      "Profit maximization",
-      "Competition over collaboration",
-      "Innovation and excellence",
-      "Secrecy and exclusivity",
+      "Maximisation des profits",
+      "Compétition plutôt que collaboration",
+      "Innovation et excellence",
+      "Secret et exclusivité",
     ],
     correctAnswer: 2,
   },
   {
     id: 7,
-    question: "How does NIRD support researchers?",
+    question: "Comment NIRD soutient-il les chercheurs ?",
     options: [
-      "Through infrastructure and resources",
-      "By providing entertainment",
-      "Through social media presence",
-      "By limiting access to tools",
+      "Par l'infrastructure et les ressources",
+      "En fournissant du divertissement",
+      "Par la présence sur les réseaux sociaux",
+      "En limitant l'accès aux outils",
     ],
     correctAnswer: 0,
   },
   {
     id: 8,
-    question: "What type of projects does NIRD typically undertake?",
+    question: "Quel type de projets NIRD entreprend-il généralement ?",
     options: [
-      "Short-term commercial projects",
-      "Long-term research and development initiatives",
-      "Marketing campaigns",
-      "Real estate development",
+      "Projets commerciaux à court terme",
+      "Initiatives de recherche et développement à long terme",
+      "Campagnes marketing",
+      "Développement immobilier",
     ],
     correctAnswer: 1,
   },
   {
     id: 9,
-    question: "How does NIRD measure success?",
+    question: "Comment NIRD mesure-t-il le succès ?",
     options: [
-      "By social media followers",
-      "Through impact on research and innovation",
-      "By stock market performance",
-      "Through advertising revenue",
+      "Par le nombre d'abonnés sur les réseaux sociaux",
+      "Par l'impact sur la recherche et l'innovation",
+      "Par la performance boursière",
+      "Par les revenus publicitaires",
     ],
     correctAnswer: 1,
   },
   {
     id: 10,
-    question: "What makes NIRD unique in its field?",
+    question: "Qu'est-ce qui rend NIRD unique dans son domaine ?",
     options: [
-      "Lowest prices",
-      "Largest physical infrastructure",
-      "Commitment to collaborative innovation",
-      "Fastest delivery times",
+      "Les prix les plus bas",
+      "La plus grande infrastructure physique",
+      "L'engagement envers l'innovation collaborative",
+      "Les délais de livraison les plus rapides",
     ],
     correctAnswer: 2,
   },
@@ -192,16 +193,17 @@ export default function QuizPage() {
     let icon = "";
 
     if (percentage >= 90) {
-      message = "Outstanding! You're a NIRD expert!";
+      message = "Exceptionnel ! Vous êtes un expert NIRD !";
       icon = "emoji_events";
     } else if (percentage >= 70) {
-      message = "Great job! You know NIRD well!";
+      message = "Excellent travail ! Vous connaissez bien NIRD !";
       icon = "celebration";
     } else if (percentage >= 50) {
-      message = "Good effort! Keep learning about NIRD!";
+      message = "Bon effort ! Continuez à apprendre sur NIRD !";
       icon = "thumb_up";
     } else {
-      message = "Keep exploring! There's more to learn about NIRD!";
+      message =
+        "Continuez à explorer ! Il y a encore plus à apprendre sur NIRD !";
       icon = "menu_book";
     }
 
@@ -213,7 +215,7 @@ export default function QuizPage() {
               {icon}
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Quiz Complete!
+              Quiz Terminé !
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               {message}
@@ -221,7 +223,9 @@ export default function QuizPage() {
 
             <div className="bg-primary/10 border-2 border-primary rounded-2xl p-8 mb-8">
               <div className="text-foreground">
-                <p className="text-lg mb-2 text-muted-foreground">Your Score</p>
+                <p className="text-lg mb-2 text-muted-foreground">
+                  Votre Score
+                </p>
                 <p className="text-6xl font-bold mb-2 text-primary">
                   {score}/{quizQuestions.length}
                 </p>
@@ -243,13 +247,13 @@ export default function QuizPage() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span className="symbols text-xl">refresh</span>
-                Try Again
+                Réessayer
               </button>
 
               <Link href="/">
                 <button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                   <span className="symbols text-xl">home</span>
-                  Return Home
+                  Retour à l'Accueil
                 </button>
               </Link>
             </div>
@@ -271,11 +275,11 @@ export default function QuizPage() {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-semibold text-foreground">
-              Question {currentQuestion + 1} of {quizQuestions.length}
+              Question {currentQuestion + 1} sur {quizQuestions.length}
             </span>
             <span className="text-sm font-semibold text-foreground flex items-center gap-1">
               <span className="symbols text-base">star</span>
-              Score: {score}
+              Score : {score}
             </span>
           </div>
           <div className="w-full bg-muted rounded-full h-3 overflow-hidden border border-border">
@@ -367,8 +371,8 @@ export default function QuizPage() {
               >
                 <span>
                   {currentQuestion === quizQuestions.length - 1
-                    ? "Finish Quiz"
-                    : "Next Question"}
+                    ? "Terminer le Quiz"
+                    : "Question Suivante"}
                 </span>
                 <span className="symbols text-xl">arrow_forward</span>
               </button>
