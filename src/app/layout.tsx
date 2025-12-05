@@ -61,12 +61,7 @@ export default function RootLayout({
           "bg-background text-foreground font-sans font-light antialiased flex min-h-screen flex-col p-6 gap-12"
         }
       >
-        <NavigationBar />
-        <Messenger />
-        <main className="flex flex-col mx-auto max-w-4xl w-full h-full gap-12">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
