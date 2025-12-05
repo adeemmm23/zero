@@ -63,10 +63,38 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2267AC" />
-          <stop offset="0.33" stopColor="#DC5CD2" />
-          <stop offset="0.66" stopColor="#FC9CB0" />
-          <stop offset="1" stopColor="#FBD469" />
+          <stop stopColor="#2267AC">
+            <animate
+              attributeName="stop-color"
+              values="#2267AC;#DC5CD2;#FC9CB0;#FBD469;#2267AC"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.33" stopColor="#DC5CD2">
+            <animate
+              attributeName="stop-color"
+              values="#DC5CD2;#FC9CB0;#FBD469;#2267AC;#DC5CD2"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.66" stopColor="#FC9CB0">
+            <animate
+              attributeName="stop-color"
+              values="#FC9CB0;#FBD469;#2267AC;#DC5CD2;#FC9CB0"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="1" stopColor="#FBD469">
+            <animate
+              attributeName="stop-color"
+              values="#FBD469;#2267AC;#DC5CD2;#FC9CB0;#FBD469"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
         </linearGradient>
         <linearGradient
           id="paint1_linear_6_88"
@@ -76,10 +104,38 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2267AC" />
-          <stop offset="0.33" stopColor="#DC5CD2" />
-          <stop offset="0.66" stopColor="#FC9CB0" />
-          <stop offset="1" stopColor="#FBD469" />
+          <stop stopColor="#2267AC">
+            <animate
+              attributeName="stop-color"
+              values="#2267AC;#DC5CD2;#FC9CB0;#FBD469;#2267AC"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.33" stopColor="#DC5CD2">
+            <animate
+              attributeName="stop-color"
+              values="#DC5CD2;#FC9CB0;#FBD469;#2267AC;#DC5CD2"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.66" stopColor="#FC9CB0">
+            <animate
+              attributeName="stop-color"
+              values="#FC9CB0;#FBD469;#2267AC;#DC5CD2;#FC9CB0"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="1" stopColor="#FBD469">
+            <animate
+              attributeName="stop-color"
+              values="#FBD469;#2267AC;#DC5CD2;#FC9CB0;#FBD469"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
         </linearGradient>
         <linearGradient
           id="paint2_linear_6_88"
@@ -89,10 +145,38 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2267AC" />
-          <stop offset="0.33" stopColor="#DC5CD2" />
-          <stop offset="0.66" stopColor="#FC9CB0" />
-          <stop offset="1" stopColor="#FBD469" />
+          <stop stopColor="#2267AC">
+            <animate
+              attributeName="stop-color"
+              values="#2267AC;#DC5CD2;#FC9CB0;#FBD469;#2267AC"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.33" stopColor="#DC5CD2">
+            <animate
+              attributeName="stop-color"
+              values="#DC5CD2;#FC9CB0;#FBD469;#2267AC;#DC5CD2"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.66" stopColor="#FC9CB0">
+            <animate
+              attributeName="stop-color"
+              values="#FC9CB0;#FBD469;#2267AC;#DC5CD2;#FC9CB0"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="1" stopColor="#FBD469">
+            <animate
+              attributeName="stop-color"
+              values="#FBD469;#2267AC;#DC5CD2;#FC9CB0;#FBD469"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
         </linearGradient>
         <linearGradient
           id="paint3_linear_6_88"
@@ -102,10 +186,38 @@ export default function Logo(props: SVGAttributes<SVGElement>) {
           y2="58.6667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2267AC" />
-          <stop offset="0.33" stopColor="#DC5CD2" />
-          <stop offset="0.66" stopColor="#FC9CB0" />
-          <stop offset="1" stopColor="#FBD469" />
+          <stop stopColor="#2267AC">
+            <animate
+              attributeName="stop-color"
+              values="#2267AC;#DC5CD2;#FC9CB0;#FBD469;#2267AC"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.33" stopColor="#DC5CD2">
+            <animate
+              attributeName="stop-color"
+              values="#DC5CD2;#FC9CB0;#FBD469;#2267AC;#DC5CD2"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="0.66" stopColor="#FC9CB0">
+            <animate
+              attributeName="stop-color"
+              values="#FC9CB0;#FBD469;#2267AC;#DC5CD2;#FC9CB0"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="1" stopColor="#FBD469">
+            <animate
+              attributeName="stop-color"
+              values="#FBD469;#2267AC;#DC5CD2;#FC9CB0;#FBD469"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
         </linearGradient>
       </defs>
     </svg>
