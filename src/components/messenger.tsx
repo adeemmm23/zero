@@ -12,7 +12,7 @@ export default function Messenger() {
     {
       // TODO: handle non pure function
       id: Date.now(),
-      content: "What can I help you with?",
+      content: "Bonjour! Comment puis-je vous aider aujourd'hui?",
       isSender: false,
     },
   ]);
