@@ -7,6 +7,8 @@ export default function Page() {
   const [isDragging, setIsDragging] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadedUrl, setUploadedUrl] = useState<string | null>(null);
+  const [truthResult, setTruthResult] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleDragEnter = (e: React.DragEvent) => {
     e.preventDefault();
@@ -43,6 +45,8 @@ export default function Page() {
     const file = files[0];
     setUploading(true);
     setUploadedUrl(null);
+    setTruthResult(null);
+    setError(null);
 
     try {
       const response = await fetch(`/api/upload?filename=${file.name}`, {
@@ -51,14 +55,20 @@ export default function Page() {
       });
 
       if (!response.ok) {
-        throw new Error("Upload failed");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Upload failed");
       }
 
       const data = await response.json();
       setUploadedUrl(data.url);
+      setTruthResult(data.truthCheck);
       console.log("File uploaded:", data.url);
-    } catch (error) {
-      console.error("Error uploading file:", error);
+      console.log("Truth check result:", data.truthCheck);
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "An error occurred";
+      setError(errorMessage);
+      console.error("Error uploading file:", err);
     } finally {
       setUploading(false);
     }
@@ -90,27 +100,70 @@ export default function Page() {
           }
         `}
       >
-        <div className="text-center space-y-3">
+        <div className="text-center space-y-3 px-8">
           {uploading ? (
             <>
+              <div className="flex items-center justify-center mb-4">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-foreground"></div>
+              </div>
               <h2 className="text-xl font-semibold text-foreground">
-                Uploading...
+                Checking Truth...
               </h2>
               <p className="text-foreground/60 text-sm">
-                Please wait while we upload your file
+                Uploading file and verifying authenticity
               </p>
             </>
-          ) : uploadedUrl ? (
+          ) : error ? (
             <>
-              <h2 className="text-xl font-semibold text-foreground">
-                Upload Complete!
+              <div className="text-5xl mb-4">❌</div>
+              <h2 className="text-xl font-semibold text-red-500">
+                Error Occurred
               </h2>
-              <p className="text-foreground/60 text-sm break-all">
-                {uploadedUrl}
-              </p>
+              <p className="text-foreground/60 text-sm">{error}</p>
+              <button
+                onClick={() => {
+                  setError(null);
+                  setUploadedUrl(null);
+                  setTruthResult(null);
+                }}
+                className="mt-4 px-4 py-2 bg-foreground text-background rounded-lg hover:opacity-80 transition-opacity"
+              >
+                Try Again
+              </button>
+            </>
+          ) : uploadedUrl && truthResult ? (
+            <>
+              <div className="text-5xl mb-4">✅</div>
+              <h2 className="text-xl font-semibold text-foreground">
+                Truth Check Complete!
+              </h2>
+              <div className="mt-4 space-y-3 max-w-2xl">
+                <div className="bg-foreground/5 rounded-lg p-4 text-left">
+                  <p className="text-foreground/80 text-sm font-semibold mb-2">
+                    Result:
+                  </p>
+                  <p className="text-foreground/70 text-sm whitespace-pre-wrap">
+                    {truthResult}
+                  </p>
+                </div>
+                <p className="text-foreground/40 text-xs break-all">
+                  File: {uploadedUrl}
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  setUploadedUrl(null);
+                  setTruthResult(null);
+                  setError(null);
+                }}
+                className="mt-4 px-4 py-2 bg-foreground text-background rounded-lg hover:opacity-80 transition-opacity"
+              >
+                Check Another File
+              </button>
             </>
           ) : (
             <>
+              <div className="text-5xl mb-4">📄</div>
               <h2 className="text-xl font-semibold text-foreground">
                 {isDragging ? "Drop to check truth" : "Drag & Drop Here"}
               </h2>
