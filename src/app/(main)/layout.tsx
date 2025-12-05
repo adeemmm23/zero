@@ -4,13 +4,11 @@ import NavigationBar from "@/components/navigation-bar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <Messenger />
-        <NavigationBar />
-        <main className="mx-auto max-w-4xl w-full px-4 py-16">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Messenger />
+      <NavigationBar />
+      <main className="mx-auto max-w-4xl w-full px-4 py-16">{children}</main>
+      <Footer />
+    </>
   );
 }
